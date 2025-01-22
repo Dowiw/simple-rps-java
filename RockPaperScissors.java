@@ -20,10 +20,17 @@ public class RockPaperScissors {
             if (userChoice.equalsIgnoreCase(compChoice)) {
                 System.out.println("It's a draw!");
             } else if (
-
-            )
+                (userChoice.equalsIgnoreCase("Rock") && compChoice.equals("Scissors")) ||
+                (userChoice.equalsIgnoreCase("Paper") && compChoice.equals("Rock") ||
+                (userChoice.equalsIgnoreCase("Scissors") && compChoice.equals("Paper")))
+                ) {
+                System.out.println("You win!");
+            } else {
+                System.out.println("You lose!");
+            }
         }
 
-        
+        System.out.println("Do you want to play again? Yes/No");
+        playAgain = scanner.nextLine().equalsIgnoreCase("Yes");
     }
 }
